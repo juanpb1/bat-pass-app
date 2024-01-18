@@ -20,6 +20,11 @@ export function Passwords() {
     getPasswords()
   },[isFocused])
 
+  const renderItem = ({item}: any) => {
+    return (
+      <Text>{item}</Text>
+    )
+  }
 
   return (
     <View style={styles.container}>
@@ -29,9 +34,7 @@ export function Passwords() {
       <View style={styles.boxPasswords}>
         <FlatList
           data={myPasswords}
-          renderItem={
-            <View></View>
-          }
+          renderItem={renderItem}
         />
       </View>
     </View>

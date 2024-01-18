@@ -9,6 +9,7 @@ import ModalPassword from '../../components/Modal';
 import Slider from '@react-native-community/slider';
 
 import passwordGenerator from '../../services/passwordService';
+import { Message } from '../../components/Message';
 
 export function Home() {
     const [isCheckedLetters, setCheckedLetters] = useState(false);
@@ -36,11 +37,7 @@ export function Home() {
     return (
         <View style={styles.container}>
             <BatLogo/>
-            {messageErro && (
-                <View>
-                    <Text style={{color: '#c42f2f'}}>Selecione pelo menos uma opção!</Text>
-                </View>
-            )}
+            <Message messageErro={messageErro} color={'#c42f2f'} text={'Selecione pelo menos uma opção!'}/>
             <Section
                 text={"Letras(A-Z | a-z)"}
                 value={isCheckedLetters}

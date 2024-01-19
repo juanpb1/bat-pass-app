@@ -27,7 +27,6 @@ export function Home() {
             await new Promise(() => setTimeout(() => {
                 setMessageErro(prevMessageErro => !prevMessageErro);
             }, 10000))
-            console.log('entrou')
         }else{
             setPasswordValue(password)
             setVisibleModal(true);
